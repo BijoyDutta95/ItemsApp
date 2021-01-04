@@ -1,0 +1,22 @@
+.homeMain{
+    margin: auto;
+    width: 30%;
+    height: fit-content;
+    background-color: #fff333;
+    align-items: center;
+}
+.heading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #ccc;
+    margin-bottom: 5px;
+}
+.itemBlock{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
