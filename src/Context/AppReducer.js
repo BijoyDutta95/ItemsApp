@@ -8,6 +8,10 @@ export default (state,action) => {
                 })
             }
 
+        case 'ADD_ITEM':
+            return{
+                items: [action.payload, ...state.items]
+            }
         default:
             return state;
     }

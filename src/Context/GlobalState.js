@@ -21,10 +21,18 @@ export const GlobalPorvider = ({ children})=>{
         })
     }
 
+    const addItem = (item) => {
+        dispatch({
+            type: 'ADD_ITEM',
+            payload:item
+        })
+    }
+
     return(
         <GlobalContext.Provider value ={{
             items:state.items,
-            removeItem
+            removeItem,
+            addItem
         }}>
         {children}
         </GlobalContext.Provider>
