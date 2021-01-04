@@ -5,8 +5,8 @@ import './Home.css'
 const Heading = () => {
     return (
         <div className="heading">
-            <h2>My Items</h2>
-            <Link to="/add"><AddIcon/></Link>
+            <p>ITEM  LIST</p>
+            <Link to="/add"><AddIcon className="iconLink"/></Link>
         </div>
     )
 }

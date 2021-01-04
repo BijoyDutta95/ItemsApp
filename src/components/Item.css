@@ -8,3 +8,10 @@
     align-items: center;
     margin: auto;
 }
+.itemBlock{
+    color: #EDF5E0;
+    font-weight: bold;
+}
+.editLink{
+    color: #EDF5E0;
+}

@@ -16,9 +16,9 @@ const ItemList = () => {
                 <>
                     {items.map(item => (
                         <div className="singleItem" key={item.id} >
-                            <h2>{item.name}</h2>
+                            <p>{item.name}</p>
                             <div>
-                                <Link to={`/edit/${item.id}`}><EditIcon/></Link>
+                                <Link to={`/edit/${item.id}`}><EditIcon className="editLink"/></Link>
                                 <DeleteIcon onClick={()=>removeItem(item.id)}/>
                             </div>
                         </div>
