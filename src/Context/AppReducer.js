@@ -12,6 +12,18 @@ export default (state,action) => {
             return{
                 items: [action.payload, ...state.items]
             }
+
+        case 'EDIT_ITEM':
+            const updatedItem=action.payload;
+            const updateditems=state.items.map(item =>{
+                if(item.id === updatedItem.id){
+                    return updatedItem;
+                }
+                return item
+            })
+            return{
+                items:updateditems
+            }    
         default:
             return state;
     }

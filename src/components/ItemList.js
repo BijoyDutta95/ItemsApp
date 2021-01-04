@@ -12,15 +12,22 @@ const ItemList = () => {
 
     return (
         <div className="itemBlock">
-            {items.map(item => (
-                <div className="singleItem">
-                    <h2>{item.name}</h2>
-                    <div>
-                        <Link to={`/edit/${item.id}`}><EditIcon/></Link>
-                        <DeleteIcon onClick={()=>removeItem(item.id)}/>
-                    </div>
-                </div>
-            ))}
+            {items.length>0 ? (
+                <>
+                    {items.map(item => (
+                        <div className="singleItem" key={item.id} >
+                            <h2>{item.name}</h2>
+                            <div>
+                                <Link to={`/edit/${item.id}`}><EditIcon/></Link>
+                                <DeleteIcon onClick={()=>removeItem(item.id)}/>
+                            </div>
+                        </div>
+                    ))}
+                </>
+            ) :(
+                <h4>Empty List</h4>
+            )}
+            
             
         </div>
     )
