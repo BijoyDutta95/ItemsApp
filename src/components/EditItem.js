@@ -27,14 +27,17 @@ const EditItem = (props) => {
     }
 
     return (
-        <form className="addItemForm" onSubmit={onSubmit}>
-            <label>Item Name</label>
-            <input type="text" name="name" value={selectedItem.name} onChange={onChange} placeholder="Item Name"></input>
-            <div>
-                <button type="submit">Update</button>
-                <Link to="/" ><button>Cancel</button></Link>
-            </div>
-        </form>
+        <div className="editItemBlock">
+            <h3>EDIT ITEM</h3>
+            <form className="addItemForm" onSubmit={onSubmit}>
+                <label>Item Name</label>
+                <input type="text" name="name" value={selectedItem.name} onChange={onChange} placeholder="Item Name"></input>
+                <div className="editButtons">
+                    <Link to="/" ><button className="cancelButton">Cancel</button></Link>
+                    <button type="submit" className="submitButton">Update</button>
+                </div>
+            </form>
+        </div>
     )
 }
 

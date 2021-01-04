@@ -20,14 +20,17 @@ const AddItem = () => {
         setName(e.target.value)
     }
     return (
-        <form className="addItemForm" onSubmit={onSubmit}>
-            <label>Item Name</label>
-            <input type="text" value={name} onChange={onChange} placeholder="Item Name"></input>
-            <div>
-                <button type="submit">Add Item</button>
-                <Link to="/" ><button>Cancel</button></Link>
-            </div>
-        </form>
+        <div className="addItemBlock">
+            <h3>ADD ITEM</h3>
+            <form className="addItemForm" onSubmit={onSubmit}>
+                <label>Item Name</label>
+                <input type="text" value={name} onChange={onChange} placeholder="Item Name"></input>
+                <div className="addButtons">
+                    <Link to="/" ><button className="cancelButton">Cancel</button></Link>
+                    <button type="submit" className="submitButton">Add Item</button>
+                </div>
+            </form>
+        </div>
     )
 }
 
