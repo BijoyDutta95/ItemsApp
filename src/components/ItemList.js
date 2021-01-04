@@ -1,17 +1,27 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './Home.css'
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import {Link} from 'react-router-dom'
+import {GlobalContext} from '../Context/GlobalState'
 
 const ItemList = () => {
+
+    const {items , removeItem} = useContext(GlobalContext);
+    console.log(items);
+
     return (
         <div className="itemBlock">
-            <h2>Item Name</h2>
-            <div>
-                <Link to="/edit"><EditIcon/></Link>
-                <DeleteIcon/>
-            </div>
+            {items.map(item => (
+                <div className="singleItem">
+                    <h2>{item.name}</h2>
+                    <div>
+                        <Link to={`/edit/${item.id}`}><EditIcon/></Link>
+                        <DeleteIcon onClick={()=>removeItem(item.id)}/>
+                    </div>
+                </div>
+            ))}
+            
         </div>
     )
 }

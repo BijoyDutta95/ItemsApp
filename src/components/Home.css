@@ -2,7 +2,6 @@
     margin: auto;
     width: 30%;
     height: fit-content;
-    background-color: #fff333;
     align-items: center;
 }
 .heading{
@@ -16,7 +15,13 @@
 }
 .itemBlock{
     display: flex;
+    flex-direction: column;
+}
+.singleItem{
+    display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    background-color: crimson;
+    align-items: center;
+    border: 1px solid black;
 }
