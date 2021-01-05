@@ -5,9 +5,9 @@ export default (state,action) => {
             return {
                 items: state.items.filter(item => {
                     return item.id !== action.payload
-                })
+                })    
             }
-
+        
         case 'ADD_ITEM':
             return{
                 items: [action.payload, ...state.items]
@@ -24,6 +24,11 @@ export default (state,action) => {
             return{
                 items:updateditems
             }    
+        
+        case 'REMOVE_ALL':
+            return {
+                items: []    
+            }
         default:
             return state;
     }

@@ -16,8 +16,9 @@ const EditItem = (props) => {
     useEffect(()=>{
         const itemId=currentItemID;
         const selectedItem= items.find(item => item.id === itemId)
-        setSelectedItem(selectedItem)
+    setSelectedItem(selectedItem)
     }, [currentItemID, items])
+    
     const onSubmit = () =>{
         editItem(selectedItem)
         history.push("/");

@@ -16,7 +16,11 @@ export const GlobalPorvider = ({ children})=>{
             payload:id
         })
     }
-
+    const removeAll = () =>{
+        dispatch({
+            type:'REMOVE_ALL'
+        })
+    }
     const addItem = (item) => {
         dispatch({
             type: 'ADD_ITEM',
@@ -36,7 +40,8 @@ export const GlobalPorvider = ({ children})=>{
             items:state.items,
             removeItem,
             addItem,
-            editItem
+            editItem,
+            removeAll
         }}>
         {children}
         </GlobalContext.Provider>
