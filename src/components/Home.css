@@ -44,3 +44,20 @@
     border-radius: 10px;
     margin-bottom: 1px;
 }
+.footer{
+    width: 100%;
+    text-align: right;
+    margin-top: 5px;
+}
+.footer button{
+    background-color: #05AAF6;
+    border: none;
+    padding: 5px 10px;
+    color: #EDF5E0;
+    border-radius: 5px;
+}
+@media screen and (max-width: 1024px) {
+    .homeMain{
+        width: 60%;
+    }
+  }

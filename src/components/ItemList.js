@@ -8,6 +8,7 @@ import {GlobalContext} from '../Context/GlobalState'
 const ItemList = () => {
 
     const {items , removeItem} = useContext(GlobalContext);
+    const {selectSingle} =useContext(GlobalContext);
     console.log(items);
 
     return (
@@ -16,11 +17,14 @@ const ItemList = () => {
                 <>
                     {items.map(item => (
                         <div className="singleItem" key={item.id} >
+                            <input type="checkbox" className="checkbox" onClick={()=>selectSingle(items.indexOf(item))}/>
+                            <>
                             <p>{item.name}</p>
                             <div>
                                 <Link to={`/edit/${item.id}`}><EditIcon className="editLink"/></Link>
                                 <DeleteIcon onClick={()=>removeItem(item.id)}/>
                             </div>
+                            </>
                         </div>
                     ))}
                 </>

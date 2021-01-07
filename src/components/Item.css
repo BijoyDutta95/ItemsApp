@@ -58,3 +58,27 @@ h3{
     padding: 3px 10px;
     color: #EDF5E0;
 }
+
+
+.checkbox {
+    width: 1.2em;
+    height: 1.2em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 2px solid #181818;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox:checked {
+    background-color: #05AAF6;
+}
+
+
+@media screen and (max-width: 992px) {
+    .addItemBlock, .editItemBlock{
+        width: 60%;
+    }
+  }

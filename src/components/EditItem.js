@@ -18,11 +18,12 @@ const EditItem = (props) => {
         const selectedItem= items.find(item => item.id === itemId)
     setSelectedItem(selectedItem)
     }, [currentItemID, items])
-    
+
     const onSubmit = () =>{
         editItem(selectedItem)
         history.push("/");
     }
+    
     const onChange=(e)=>{
         setSelectedItem({...selectedItem,[e.target.name]:e.target.value})
     }
